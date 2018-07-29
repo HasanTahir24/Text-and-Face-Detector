@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller2-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController2" customModule="facedetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="drd-l3-Acc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rff-B3-1LD">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="sRA-GQ-q79"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9F4-Gs-P0W"/>
+                                    <barButtonItem title="Detect Text" id="4QQ-BT-Fte">
+                                        <connections>
+                                            <action selector="DetectText:" destination="BYZ-38-t0r" id="ie4-Mf-qoR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="GOP-FZ-BLz"/>
+                                    <barButtonItem title="Detect Face" id="KIi-mK-a2F">
+                                        <connections>
+                                            <action selector="DetectFace:" destination="BYZ-38-t0r" id="S8N-Sw-1y4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2QH-jP-NBi"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="drd-l3-Acc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BVe-su-Mky"/>
+                            <constraint firstItem="drd-l3-Acc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ie3-eY-RGo"/>
+                            <constraint firstItem="rff-B3-1LD" firstAttribute="top" secondItem="drd-l3-Acc" secondAttribute="bottom" id="N0x-5X-9Jt"/>
+                            <constraint firstItem="rff-B3-1LD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WmX-Sb-CE5"/>
+                            <constraint firstItem="drd-l3-Acc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b5G-8L-3tn"/>
+                            <constraint firstItem="rff-B3-1LD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ktN-kC-A4T"/>
+                            <constraint firstItem="rff-B3-1LD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wjm-kH-IF9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="drd-l3-Acc" id="Bhf-NF-BDT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
